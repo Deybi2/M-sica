@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head>
+    <title>Lista de Actores</title>
+   
+    </head><body>
+        <h1>Actores</h1>
+        <ul>
+            {% for actor in actores %}
+                <li>{{ actor ['first_name'] }} {{ actor ['last_name'] }}</li>
+            {% endfor %}
+        </ul>
+    </body></html>

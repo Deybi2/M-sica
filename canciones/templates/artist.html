@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+    <title>Lista de Cantantes</title>
+    <link rel="stylesheet" type="text/css">
+
+</head><body>
+
+    <h1>Cantantes</h1>
+    <ul>
+        {% for artista in artistas %}
+            <li><a href="{{ url_for('artista.detalle', id=artista['ArtistId']) }}">
+                {{ artista["Name"] }} 
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body></html>

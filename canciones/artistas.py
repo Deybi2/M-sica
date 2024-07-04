@@ -20,12 +20,11 @@ def artistas():
 def detalle(id):
     con = db.get_db()
     consulta1 = """
-        SELECT Name, ArtistId FROM artists
+        SELECT Name FROM artists
         WHERE ArtistId = ? ;
     """
     consulta2 = """
-        SELECT a.name, g.Title FROM albums g
-        JOIN artists a ON g.ArtistId = a.ArtistId
+        SELECT Title, AlbumId FROM albums 
         WHERE a.ArtistId = ? ;
     """
     res = con.execute(consulta1, (id, ))

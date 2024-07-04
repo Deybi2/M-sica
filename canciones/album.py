@@ -24,9 +24,8 @@ def album_detalle(id):
         WHERE AlbumId = ? ;
     """
     consulta2 = """
-        SELECT a.name, g.Title FROM albums g
-        JOIN tracks a ON g.AlbumId = a.AlbumId
-        WHERE g.AlbumId = ? ;
+        SELECT name, TrackId FROM tracks
+        WHERE AlbumId = ? ;
     """
     res = con.execute(consulta1, (id, ))
     album = res.fetchone()

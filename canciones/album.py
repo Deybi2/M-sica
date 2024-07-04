@@ -3,7 +3,7 @@ from . import db
 
 bp = Blueprint('album', __name__, url_prefix='/album')
 
-@bp.route("/album")
+@bp.route("/")
 def albums():
     consulta1 = """
                 SELECT Title, AlbumId FROM albums

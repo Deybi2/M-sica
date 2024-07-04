@@ -25,7 +25,7 @@ def detalle(id):
     """
     consulta2 = """
         SELECT Title, AlbumId FROM albums 
-        WHERE a.ArtistId = ? ;
+        WHERE ArtistId = ? ;
     """
     res = con.execute(consulta1, (id, ))
     artista = res.fetchone()
